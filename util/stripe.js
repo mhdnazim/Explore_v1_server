@@ -1,7 +1,7 @@
 import Stripe from "stripe"
 
 const stripe = new Stripe("sk_test_51PLfemC65sgmj7Mot4O8f4eAXV9TSyKLboHUEsWOejiYSdh2l2ootyy8DQ5m5ZDFuq1dnigb3sCkl3B5gqUwtExn00A42bV8so");
-const host = "http://localhost:3000/";
+const host = "https://explorerv1.netlify.app";
 
 export const stripePayment = async ( amount, _id, type ) => {
     try {
