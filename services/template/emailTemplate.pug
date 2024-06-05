@@ -1,0 +1,141 @@
+
+
+doctype strict
+head
+  meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Email Notification
+table(width='100%' style='background-color:#F5F8FA')
+  tbody
+    tr
+      td(align='center' valign='top')
+        table(cellpadding='0' cellspacing='0' style='max-width:600px')
+          tbody
+            tr
+              td(align='center')
+                table(style='-webkit-box-shadow:6px 6px 40px 3px rgba(140, 152, 164, 0.2);background-color:#FFF;box-shadow:6px 6px 40px 3px rgba(140, 152, 164, 0.2);margin:0 auto;width:100%;padding:0 20px;font-family:sans-serif')
+                  tbody
+                    tr
+                      td(height='40')
+                    tr
+                      td(align='center')
+                        img(alt='logo' src='https://i.postimg.cc/Wp6NXrnZ/favicon.png' width='150' style='display:block;outline:none;border:none;text-decoration:none')
+                    tr
+                      td(height='30')
+                    //- tr
+                    //-   td(align='center')
+                    //-     img(src='https://assets.sicepat.com/images/audit/schedule.png' alt='email-icon' width='55' height='55' style='display:block;outline:none;border:none;text-decoration:none')
+                    tr
+                      td(height='10')
+                    tr
+                      td(align='center')
+                        span(style='color:#94bc7b;font-weight:bold;font-size:20px') Email Notification
+                    tr
+                      td(height='30')
+                    tr
+                      td(align='left') Hello #{receiver.name}
+                    tr
+                      td(height='10')
+                    tr
+                      td(align='left')
+                        div
+                          | You have a new notification that
+                          | 
+                          // 
+                          b #{subject.toLowerCase()}
+                          | 
+                          // 
+                          b
+                            //- | #{branchName}
+                            | 
+                            // 
+                            //- if departmentName
+                            //-   | -
+                            //-   | 
+                            //-   | #{departmentName}
+                          // 
+                          | 
+                          | #{text}
+                          | 
+                          // 
+                          b
+                            | #{startDate}
+                            // 
+                            | 
+                            //- | s/d
+                            | 
+                            // 
+                            | #{endDate}
+                          // 
+                          | 
+                          | further proceedings
+                          | 
+                          // 
+                          span(style='white-space:nowrap')
+                            b #{assignmentLetterCode}
+                    tr
+                      td(height='10')
+                    tr
+                      td
+                        div
+                          | #{message}
+                          | 
+                          // 
+                          span(style='white-space:nowrap')
+                            b #{assignmentLetterCode}
+                    tr
+                      td(height='30')
+                    tr
+                      td(align='left') Thank You...
+                    tr
+                      td(height='10')
+                    tr
+                      td(align='left') Team Explorer.com
+                    tr
+                      td(align='left')
+                        span(style='color:#727272') Visit website for more Information
+                    tr
+                      td(height='40')
+                    tr
+                      td(align='center')
+                        a(href=hasilAuditURL target='_blank' style='background-color:#94bc7b;color:#000;padding:10px 15px;text-align:center;border-radius:20px;font-size:12px;font-weight:bold;text-decoration:none;white-space:nowrap' rel='noreferrer') EXPLORER.C0M
+                    tr
+                      td(height='40')
+                table(style='-webkit-box-shadow:6px 6px 40px 3px rgba(140, 152, 164, 0.2);background-color:#94bc7b;color:#000;box-shadow:6px 6px 40px 3px rgba(140, 152, 164, 0.2);margin:0 auto;width:100%;padding:0 32px;font-size:14px;font-family:sans-serif')
+                  tbody
+                    tr
+                      td(height='20')
+                    tr
+                      td(align='center') Follow us on
+                    tr
+                      td(height='5')
+                    tr
+                      td(align='center')
+                        a(href='https://www.facebook.com/sicepatekspresofficial/' target='_blank' rel='noreferrer' style='margin:0px 5px')
+                          img(src='https://assets.sicepat.com/images/audit/facebook-circle.png' alt='facebook' width='20' height='20')
+                        a(href='https://twitter.com/sicepat_ekspres' target='_blank' rel='noreferrer' style='margin:0px 5px')
+                          img(src='https://assets.sicepat.com/images/audit/twitter-circle.png' alt='twitter' width='20' height='20')
+                        a(href='https://www.youtube.com/channel/UC9DIPyaNoShFJ5oKsrv7AVg' target='_blank' rel='noreferrer' style='margin:0px 5px')
+                          img(src='https://assets.sicepat.com/images/audit/youtube-circle.png' alt='youtube' width='20' height='20')
+                        a(href='https://www.instagram.com/sicepat_ekspres/' target='_blank' rel='noreferrer' style='margin:0px 5px')
+                          img(src='https://assets.sicepat.com/images/audit/instagram-circle.png' alt='instagram' width='20' height='20')
+                    tr
+                      td(height='10')
+                    tr
+                      td(align='center') Download App
+                    tr
+                      td(height='5')
+                    tr
+                      td(align='center')
+                        a(href='https://play.google.com/store/apps/details?id=com.sicepat.consumer' target='_blank' rel='noreferrer' style='margin:0px 5px')
+                          img(alt='playstore' src='https://assets.sicepat.com/images/audit/playstore.png' width='95' height='30')
+                        a(href='https://apps.apple.com/us/app/sicepat-ekspres/id1608647889?l=id' target='_blank' rel='noreferrer' style='margin:0px 5px')
+                          img(alt='appstore' src='https://assets.sicepat.com/images/audit/appstore.png' width='95' height='30')
+                    tr
+                      td(height='10')
+                    tr
+                      td(align='center') WWW.EXPLORER.COM
+                    tr
+                      td(align='center') Kerala, India
+                    tr
+                      td(height='40')
