@@ -15,7 +15,7 @@ import { Server } from 'socket.io';
 import { createServer } from 'http';
 
 const stripe = new Stripe("sk_test_51PLfemC65sgmj7Mot4O8f4eAXV9TSyKLboHUEsWOejiYSdh2l2ootyy8DQ5m5ZDFuq1dnigb3sCkl3B5gqUwtExn00A42bV8so");
-const host = "https://explorerv1.netlify.app";
+const host = "https://explore-v1-client.vercel.app";
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename);
