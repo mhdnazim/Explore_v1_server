@@ -65,3 +65,59 @@ export const login = async (req, res, next) => {
         return next(new HttpError("Oops! Process failed, please do contact admin", 500))
     }
 }
+
+
+export const authConfirmTest = async (req, res, next) => {
+    try {
+        const errors = validationResult(req)
+
+        if (! errors.isEmpty()) {
+            return next(new HttpError("Invalid data inputs passed, Please check your data before retry!", 422))
+        } else {
+            const { userId } = req.userData
+
+            const user = await Users.findOne({ _id: userId })
+
+            const operator = await Touroperators.findOne({ _id: userId })
+
+            if ( ! user && ! operator ) {
+                return next( new HttpError("Invalid data inputs passed, Please check your data before retry!",422 ));
+              } else if ( user ) {
+      
+                const token = jwt.sign(
+                  { userId : user._id, userEmail : user.email, role : "user" }, 
+                  process.env.JWT_SECRET,
+                  { expiresIn: process.env.JWT_TOKEN_EXPIRY }
+                );
+                res.status(200).json({
+                  status : true,
+                  message : '',
+                  data: {
+                    role: "user", 
+                    _id: user._id
+                  },
+                  access_token : token
+                })
+              } else if ( operator ) {
+      
+                const token = jwt.sign(
+                  { userId : operator._id, userEmail : operator.email, role : "Tour Operator" }, 
+                  process.env.JWT_SECRET,
+                  { expiresIn: process.env.JWT_TOKEN_EXPIRY }
+                );
+                res.status(200).json({
+                  status : true,
+                  message : '',
+                  data: {
+                    role: "Tour Operator", 
+                    _id: operator._id
+                  },
+                  access_token : token
+                })
+              } 
+        }
+    } catch (err) {
+        console.error(err)
+        return next(new HttpError("Oops! Process failed, please do contact admin", 500))
+    }
+}
