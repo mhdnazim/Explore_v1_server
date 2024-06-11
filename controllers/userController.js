@@ -82,24 +82,24 @@ export const findUserDetails = async (req, res, next) => {
     }
 }
 
-export const authConfirmTest = async (req, res, next) => {
-    try {
-        const errors = validationResult(req)
+// export const authConfirmTest = async (req, res, next) => {
+//     try {
+//         const errors = validationResult(req)
 
-        if (! errors.isEmpty()) {
-            return next(new HttpError("Invalid data inputs passed, Please check your data before retry!", 422))
-        } else {
-            const { userId } = req.userData
+//         if (! errors.isEmpty()) {
+//             return next(new HttpError("Invalid data inputs passed, Please check your data before retry!", 422))
+//         } else {
+//             const { userId } = req.userData
 
-            res.status(200).json({
-                status: true,
-                message: 'Successfully authorized',
-                data: userId,
-                access_token: null
-            })
-        }
-    } catch (err) {
-        console.error(err)
-        return next(new HttpError("Oops! Process failed, please do contact admin", 500))
-    }
-}
+//             res.status(200).json({
+//                 status: true,
+//                 message: 'Successfully authorized',
+//                 data: userId,
+//                 access_token: null
+//             })
+//         }
+//     } catch (err) {
+//         console.error(err)
+//         return next(new HttpError("Oops! Process failed, please do contact admin", 500))
+//     }
+// }
